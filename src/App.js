@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Score from "./components/Score";
 import friends from "./friends.json";
 import "./App.css";
 
@@ -22,7 +23,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>Friends List</Title>
+        <Title>One Punch Man - Clicky Game <Score>Score:</Score></Title>
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
