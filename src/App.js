@@ -24,17 +24,13 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>One Punch Man - Clicky Game <Counter>Score:</Counter></Title>
+        <Title>One Punch Man - Clicky Game <Counter></Counter></Title>
         <Instructions>Click on an image to earn points, but don't click on the same image more than once!</Instructions>
         {this.state.friends.map(friend => (
           <FriendCard
-            removeFriend={this.removeFriend}
             id={friend.id}
             key={friend.id}
-            name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
           />
         ))}
       </Wrapper>
