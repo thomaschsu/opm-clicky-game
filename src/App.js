@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import CardWrapper from "./components/CardWrapper";
 import Counter from "./components/Counter";
 import Instructions from "./components/Instructions";
 import friends from "./friends.json";
@@ -26,13 +27,15 @@ class App extends Component {
       <Wrapper>
         <Title>One Punch Man Clicky Game <Counter></Counter></Title>
         <Instructions>Click on an image to earn points, but don't click on the same image more than once or you lose!</Instructions>
-        {this.state.friends.map(friend => (
-          <FriendCard
-            id={friend.id}
-            key={friend.id}
-            image={friend.image}
-          />
-        ))}
+        <CardWrapper>
+          {this.state.friends.map(friend => (
+            <FriendCard
+              id={friend.id}
+              key={friend.id}
+              image={friend.image}
+            />
+          ))}
+        </CardWrapper>
       </Wrapper>
     );
   }
