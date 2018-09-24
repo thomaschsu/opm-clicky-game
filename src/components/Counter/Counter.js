@@ -18,7 +18,7 @@ class Counter extends React.Component {
     render() {
         return (
                 <div className="counter">
-                    <span className="card-text">Click Count: {this.state.count}</span>
+                    <span className="card-text">Score: {this.state.count}</span>
                     <button className="btn btn-primary" onClick={this.handleIncrement}>
                         Increment
                     </button>
