@@ -26,7 +26,7 @@ class App extends Component {
     return (
       <Wrapper>
         <Title>One Punch Man Clicky Game <Counter></Counter></Title>
-        <Instructions>Click on an image to earn points, but don't click on the same image more than once or you lose!</Instructions>
+        <Instructions>Click on an image to earn 1 point, but don't click on that same image or you lose!</Instructions>
         <CardWrapper>
           {this.state.friends.map(friend => (
             <FriendCard
