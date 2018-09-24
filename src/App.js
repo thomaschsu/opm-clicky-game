@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import Score from "./components/Score";
+import Counter from "./components/Counter";
+import Instructions from "./components/Instructions";
 import friends from "./friends.json";
 import "./App.css";
 
@@ -23,7 +24,8 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>One Punch Man - Clicky Game <Score>Score:</Score></Title>
+        <Title>One Punch Man - Clicky Game <Counter>Score:</Counter></Title>
+        <Instructions>Click on an image to earn points, but don't click on the same image more than once!</Instructions>
         {this.state.friends.map(friend => (
           <FriendCard
             removeFriend={this.removeFriend}
