@@ -1,7 +1,8 @@
 {
-  "name": "reactpractice",
+  "name": "opm-game",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://thomaschsu.github.io/opm-clicky-game",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.5.2",
