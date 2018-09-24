@@ -3,7 +3,6 @@ import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import CardWrapper from "./components/CardWrapper";
-import Counter from "./components/Counter";
 import Instructions from "./components/Instructions";
 import friends from "./friends.json";
 import "./App.css";
@@ -25,7 +24,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Title>One Punch Man Clicky Game <Counter></Counter></Title>
+        <Title>One Punch Man Clicky Game</Title>
         <Instructions>Click on an image to earn 1 point, but don't click on that same image or you lose!</Instructions>
         <CardWrapper>
           {this.state.friends.map(friend => (
