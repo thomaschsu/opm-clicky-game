@@ -4,9 +4,3 @@
   text-align: left !important;
   padding-left: 20px;
 }
-#score,
-#topscore {
-  display: inline-block;
-  float: right;
-  padding: 0 10px;
-}
