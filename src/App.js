@@ -17,7 +17,8 @@ class App extends Component {
     clicked: []
   };
 
-  click = event => {
+  // Click event to add 1 to score
+  click = () => {
     this.setState(
       {
         score: this.state.score + 1
