@@ -23,7 +23,6 @@ class App extends Component {
     return (
       <Wrapper>
         <Nav></Nav>
-        <Title score={this.state.score}></Title>
         <Title>Click on an image to earn 1 point, but don't click on that same image or you lose!</Title>
         <CardWrapper>
           {this.state.friends.map(friend => (
