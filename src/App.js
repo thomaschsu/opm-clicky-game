@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Nav from "./components/Nav";
 import CardWrapper from "./components/CardWrapper";
 import friends from "./friends.json";
 import "./App.css";
@@ -21,6 +22,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
+        <Nav></Nav>
         <Title score={this.state.score}></Title>
         <Title>Click on an image to earn 1 point, but don't click on that same image or you lose!</Title>
         <CardWrapper>
