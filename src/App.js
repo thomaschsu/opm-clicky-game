@@ -22,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Nav></Nav>
+        <Nav title="One Punch Man Clicky Game" />
         <Title>Click on an image to earn 1 point, but don't click on that same image or you lose!</Title>
         <CardWrapper>
           {this.state.friends.map(friend => (
