@@ -12,14 +12,18 @@ class App extends Component {
   state = {
     friends,
     score: 0,
-    topScore: 0
+    topScore: 0,
+    clicked: []
   };
 
-  click = () => {
-    const score = this.state.score + 1;
+  click = event => {
+    this.setState(
+      {
+        score: this.state.score + 1
+      }
+    )
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
