@@ -8,6 +8,14 @@ import CardWrapper from "./components/CardWrapper";
 import friends from "./friends.json";
 import "./App.css";
 
+function shuffle(a) {
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
 class App extends Component {
   // Set state
   state = {
@@ -17,13 +25,20 @@ class App extends Component {
     clicked: []
   };
 
-  // Click event to add 1 to score
+// Click event to add 1 to score
   click = () => {
     this.setState(
       {
+        topScore: this.state.topScore + 1,
         score: this.state.score + 1
       }
     )
+    this.shuffle();
+  };
+
+  shuffle = () => {
+    let newFriends = shuffle(friends);
+    this.setState({friends: newFriends });
   };
 
   render() {
@@ -37,6 +52,7 @@ class App extends Component {
         <CardWrapper>
           {this.state.friends.map(friend => (
             <FriendCard
+              shuffle={this.shuffle}
               id={friend.id}
               key={friend.id}
               image={friend.image}
