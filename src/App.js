@@ -21,7 +21,6 @@ class App extends Component {
   state = {
     friends,
     score: 0,
-    topScore: 0,
     clicked: []
   };
 
@@ -29,7 +28,6 @@ class App extends Component {
   click = () => {
     this.setState(
       {
-        topScore: this.state.topScore + 1,
         score: this.state.score + 1
       }
     )
@@ -46,7 +44,6 @@ class App extends Component {
       <Wrapper>
         <Nav title="One Punch Man - Clicky Game"
         score={this.state.score}
-        topScore={this.state.topScore}
         />
         <Title>The goal is to memorize which images you have already clicked on. Click on any image to earn a point, but don't click on that same image or the game will end and restart!</Title>
         <CardWrapper>
