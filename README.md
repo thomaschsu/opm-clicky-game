@@ -25,7 +25,7 @@ Welcome to One Punch Man Clicky Game. This application uses react to generate th
 2. JavaScript
 3. Express
 4. HTML
-5. CSS
+5. CSS / Materialize
 6. Axios
 7. NPM
 8. CLI
