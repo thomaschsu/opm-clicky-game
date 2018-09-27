@@ -2,7 +2,7 @@ import React from "react";
 import "./FriendCard.css";
 
 const FriendCard = props => (
-  <div className="card" value={props.id} onClick={() => props.click(props.id)}>
+  <div className="card" value={props.id} onClick={props.click}>
     <div className="img-container">
       <img alt={props.name} src={props.image} />
     </div>
