@@ -8,6 +8,7 @@ import CardWrapper from "./components/CardWrapper";
 import friends from "./friends.json";
 import "./App.css";
 
+// ES6 shuffle function of fisher-yates algorithm
 function shuffle(a) {
   for (let i = a.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -17,7 +18,7 @@ function shuffle(a) {
 }
 
 class App extends Component {
-  // Set state
+  // Set states
   state = {
     friends,
     score: 0,
@@ -34,11 +35,24 @@ class App extends Component {
     this.shuffle();
   };
 
+  // Create a restart function
+  restart = () => {
+    this.setState(
+      {
+        friends,
+        score: 0,
+        clicked: []
+      }
+    )
+  }
+
+  // Create shuffle function and let newfriends become new shuffled array
   shuffle = () => {
     let newFriends = shuffle(friends);
     this.setState({friends: newFriends });
   };
 
+  // Render everything onto page
   render() {
     return (
       <Wrapper>
