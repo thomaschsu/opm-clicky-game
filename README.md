@@ -9,7 +9,8 @@ Welcome to One Punch Man Clicky Game. This application uses react to generate th
 
 1. Run "yarn install"
 2. Run "yarn start"
-3. Enjoy
+3. Play the game
+4. Enjoy!
 
 - - -
 
